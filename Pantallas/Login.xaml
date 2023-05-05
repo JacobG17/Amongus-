@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="InstantFood.Pantallas.Login"
+             Title="Login">
+
+    <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+        <Label
+            Text="LOGIN"
+            HorizontalOptions="Center"
+            FontSize="50"
+            Margin="60"
+            />
+
+        <Label
+            Text="!Bienvenido de vuelta!"
+            HorizontalOptions="Start"
+            FontSize="18"
+            FontFamily="WorkSans-VariableFont"
+            TextColor="#5135d1"
+            />
+
+        <sf:SfTextInputLayout
+            Hint="Usuario"
+            ContainerType="None"
+            FocusedStrokeThickness="4"
+            UnfocusedStrokeThickness="2"
+            WidthRequest="370"
+            LeadingViewPosition="Outside">
+            
+
+            <Entry
+                x:Name="tiUsuario"
+                ClearButtonVisibility="WhileEditing"
+                IsSpellCheckEnabled="False"
+                
+            />
+        </sf:SfTextInputLayout>
+
+        <sf:SfTextInputLayout
+            Hint="Password"
+            ContainerType="None"
+            FocusedStrokeThickness="4"
+            UnfocusedStrokeThickness="2"
+            WidthRequest="370">
+            
+
+            <Entry
+                x:Name="tiPassword"
+                ClearButtonVisibility="WhileEditing"
+                IsSpellCheckEnabled="False"
+                IsPassword="True"
+                />
+        </sf:SfTextInputLayout>
+
+        <Button
+            Text="Ingresar"
+            FontSize="25"
+            CornerRadius="26"
+            FontFamily="WorkSans-VariableFont"
+            />
+        <StackLayout Orientation="Horizontal">
+            <Label
+                Text="¿Aún no tienes una cuenta?"
+                HorizontalOptions="Start"
+                Margin="0"
+                Padding="5"/>
+            <Button
+                WidthRequest="125"
+                HeightRequest="0" 
+                Text="Registrate aquí"
+                TextColor="#5135d1"
+                BackgroundColor="White"
+                HorizontalOptions="Start"
+                />
+                
+        </StackLayout>
+
+    </VerticalStackLayout>
+
+    
+
+</ContentPage>
