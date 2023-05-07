@@ -63,6 +63,13 @@
 	  <None Remove="Resources\Images\home.png" />
 	  <None Remove="Resources\Images\cart.png" />
 	  <None Remove="Resources\Images\carrito.png" />
+	  <None Remove="Resources\Images\hamburguesa.png" />
+	  <None Remove="Resources\Images\pizza.png" />
+	  <None Remove="Resources\Images\tacos.png" />
+	  <None Remove="Resources\Images\burrito.png" />
+	  <None Remove="Resources\Images\sushi.png" />
+	  <None Remove="Resources\Images\polloasado.png" />
+	  <None Remove="Resources\Images\torta.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pantallas\" />
@@ -78,5 +85,19 @@
 	  <BundleResource Include="Resources\Images\cart.png" />
 	  <BundleResource Include="Resources\Images\carrito.png" />
 	  <BundleResource Include="Resources\Images\carrito.png" />
+	  <BundleResource Include="Resources\Images\hamburguesa.png" />
+	  <BundleResource Include="Resources\Images\hamburguesa.png" />
+	  <BundleResource Include="Resources\Images\pizza.png" />
+	  <BundleResource Include="Resources\Images\pizza.png" />
+	  <BundleResource Include="Resources\Images\tacos.png" />
+	  <BundleResource Include="Resources\Images\tacos.png" />
+	  <BundleResource Include="Resources\Images\burrito.png" />
+	  <BundleResource Include="Resources\Images\burrito.png" />
+	  <BundleResource Include="Resources\Images\sushi.png" />
+	  <BundleResource Include="Resources\Images\sushi.png" />
+	  <BundleResource Include="Resources\Images\polloasado.png" />
+	  <BundleResource Include="Resources\Images\polloasado.png" />
+	  <BundleResource Include="Resources\Images\torta.png" />
+	  <BundleResource Include="Resources\Images\torta.png" />
 	</ItemGroup>
 </Project>

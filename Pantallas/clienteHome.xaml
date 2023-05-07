@@ -8,29 +8,148 @@
 
     <VerticalStackLayout>
 
-        <StackLayout Orientation="Horizontal" Margin="0,8,0,0">
-
-            <Label
-                Text="InstantFood"
-                TextColor="Black"
-                FontAttributes="Bold"
-                FontSize="23"
-                FontFamily="Roboto-Italic"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Padding="5"
-                Margin="131,0,50,0"
-            />
+        <StackLayout Orientation="Horizontal" Margin="5,10,0,0">
 
             <Button x:Name="btnCarrito"
                 Clicked="btnCarrito_Clicked"
                 Grid.Column="1"
+                HorizontalOptions="EndAndExpand"
                 BackgroundColor="White"
                 ImageSource="carrito.png"
                 Margin="0,0,0,0"
             />
         </StackLayout>
-        
+
+        <Label
+            Text="¿Que se le antoja?"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="20"
+            FontFamily="Roboto-Italic"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="5"
+            Margin="15,25,0,0"
+        />
+
+        <ScrollView Orientation="Horizontal">
+
+            <StackLayout Orientation="Horizontal" Margin="15,30,30,20">
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0">
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Hamburguesa" Tapped="Hamburguesa_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="hamburguesa.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Hamburguesa" HorizontalOptions="Center" FontSize="12.4" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0" >
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Pizza" Tapped="Pizza_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="pizza.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Pizza" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0" >
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Sushi" Tapped="Sushi_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="sushi.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Sushi" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0" >
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Tacos" Tapped="Tacos_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="tacos.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Tacos" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0">
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Burritos" Tapped="Burritos_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="burrito.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Burritos" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10" Margin="0,0,15,0">
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="Torta" Tapped="Torta_Tapped"/>
+                    </Frame.GestureRecognizers>
+
+                    <StackLayout>
+                        <Image Source="torta.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Torta" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame Grid.Row="1" CornerRadius="10"  Margin="0,0,15,0" >
+
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer x:Name="PolloA" Tapped="PolloA_Tapped"/>
+                    </Frame.GestureRecognizers>
+                     
+                    <StackLayout>
+                        <Image Source="polloasado.png" WidthRequest="70" HeightRequest="70"/>
+                        <Label Text="Pollo Asado" HorizontalOptions="Center" FontFamily="WorkSans-VariableFont" TextColor="Black"/>
+                    </StackLayout>
+
+                </Frame>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        <Label
+            Text="Restaurantes"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="20"
+            FontFamily="Roboto-Italic"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="5"
+            Margin="15,25,0,0"
+        />
+
+        <StackLayout>
+
+            <Frame Grid.Row="1" CornerRadius="10" Margin="15,10,15,10">
+
+
+            </Frame>
+
+        </StackLayout>
 
     </VerticalStackLayout>
 
