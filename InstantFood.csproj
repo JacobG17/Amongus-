@@ -58,8 +58,25 @@
 
 	<ItemGroup>
 	  <None Remove="Pantallas\" />
+	  <None Remove="Resources\Images\orders.png" />
+	  <None Remove="Resources\Images\profile.png" />
+	  <None Remove="Resources\Images\home.png" />
+	  <None Remove="Resources\Images\cart.png" />
+	  <None Remove="Resources\Images\carrito.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pantallas\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\orders.png" />
+	  <BundleResource Include="Resources\Images\orders.png" />
+	  <BundleResource Include="Resources\Images\profile.png" />
+	  <BundleResource Include="Resources\Images\profile.png" />
+	  <BundleResource Include="Resources\Images\home.png" />
+	  <BundleResource Include="Resources\Images\home.png" />
+	  <BundleResource Include="Resources\Images\cart.png" />
+	  <BundleResource Include="Resources\Images\cart.png" />
+	  <BundleResource Include="Resources\Images\carrito.png" />
+	  <BundleResource Include="Resources\Images\carrito.png" />
 	</ItemGroup>
 </Project>

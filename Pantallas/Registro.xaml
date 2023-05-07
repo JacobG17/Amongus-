@@ -1,14 +1,213 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="InstantFood.Pantallas.Registro"
-             Title="Registro">
+             xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="InstantFood.Pantallas.Registro">
 
-    <VerticalStackLayout>
-        <Label 
-            Text="Welcome to Registr"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+
+        <VerticalStackLayout>
+
+            <Label
+                Text="Registro"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="23"
+                FontFamily="Roboto-Italic"
+                VerticalOptions="Center"
+                HorizontalOptions="CenterAndExpand"
+                Padding="5"
+                Margin="15"
+            />
+
+            <Label 
+                Text="Tipo de cuenta:"
+                TextColor="Black"
+                FontFamily="Manrope_Regular"
+                FontSize="17"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                Margin="15"
+            />
+
+            <Picker x:Name="cbCuenta" SelectedIndexChanged="cbCuenta_SelectedIndexChanged" WidthRequest="365" HeightRequest="50" Margin="15" Title="CUENTA" TextColor="Black">
+                <Picker.Items>
+                    <x:String>CUENTA</x:String>
+                    <x:String>Cliente</x:String>
+                    <x:String>Restaurante</x:String>
+                </Picker.Items>
+            </Picker>
+
+        <!--Registro de los datos del Cliente-->
+
+            <Label x:Name="DtCliente"
+                Text="Datos del cliente:"
+                FontFamily="Manrope_Regular"
+                TextColor="Black"
+                FontSize="17"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                Margin="15"
+            />
+
+            <sf:SfTextInputLayout x:Name="idCliente"
+                Hint="Cliente ID"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbID"
+                    TextChanged="tbID_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout x:Name="nombreCliente"
+                HelperText="Ingresa tu nombre"
+                Hint="Nombre"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbNombre"
+                       TextChanged="tbNombre_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout x:Name="apellidoCliente"
+                HelperText="Ingresa tu apellido"
+                Hint="Apellido"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbApellido"
+                       TextChanged="tbApellido_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout x:Name="telefonoCliente"
+                HelperText="Ingresa tu telefono"
+                Hint="Telefono"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbTelefono"
+                    TextChanged="tbTelefono_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <Button x:Name="btnRegistroCliente"
+                Text="Finalizar registro"
+                Clicked="btnRegistroCliente_Clicked"
+                WidthRequest="250"
+                FontSize="25"
+                CornerRadius="20"
+                FontFamily="WorkSans-VariableFont"
+                Margin="15"
+                Padding="0"
+            />
+
+          <!--Registro de los datos del Restaurante-->
+
+            <Label x:Name="DtRestaurante"
+                Text="Datos del Restaurante:"
+                FontFamily="Manrope_Regular"
+                TextColor="Black"
+                FontSize="17"
+                VerticalOptions="Fill" 
+                HorizontalOptions="Fill"
+                Margin="15"
+            />
+
+            <sf:SfTextInputLayout x:Name="idRestaurante"
+                Hint="Restaurante ID"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbRestaurantID"
+                    TextChanged="tbRestaurantID_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout x:Name="nombreRestaurante"
+                HelperText="Ingresa el nombre de tu restaurante"
+                Hint="Nombre"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbRestauranteName"
+                       TextChanged="tbRestauranteName_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout  x:Name="telefonorestaurante"
+                HelperText="Ingresa el telefono del restaurante"
+                Hint="Telefono"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbRestauranteTelefono"
+                    TextChanged="tbRestauranteTelefono_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Numeric"
+                    MaxLength="10"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <sf:SfTextInputLayout x:Name="direccionRestaurante"
+                HelperText="Ingresa la direccion"
+                Hint="Direccion"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbDireccion"
+                    TextChanged="tbDireccion_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+
+            <Button x:Name="btnRegistroRestaurante"
+                Clicked="btnRegistroRestaurante_Clicked"
+                Text="Finalizar registro"
+                WidthRequest="250"
+                FontSize="25"
+                CornerRadius="20"
+                FontFamily="WorkSans-VariableFont"
+                Margin="15"
+                Padding="0"
+            />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
 
 </ContentPage>

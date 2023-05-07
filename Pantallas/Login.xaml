@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:sf="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
              x:Class="InstantFood.Pantallas.Login"
-             Title="Login">
+             NavigationPage.HasNavigationBar="False">
 
     <VerticalStackLayout
             Spacing="25"
@@ -25,7 +25,7 @@
             TextColor="#5135d1"
             />
 
-        <sf:SfTextInputLayout
+        <sf:SfTextInputLayout x:Name="Ususario"
             Hint="Usuario"
             ContainerType="None"
             FocusedStrokeThickness="4"
@@ -38,39 +38,47 @@
                 x:Name="tiUsuario"
                 ClearButtonVisibility="WhileEditing"
                 IsSpellCheckEnabled="False"
-                
+                TextChanged="tiUsuario_TextChanged"
             />
         </sf:SfTextInputLayout>
 
-        <sf:SfTextInputLayout
+        <sf:SfTextInputLayout x:Name="Password"
             Hint="Password"
             ContainerType="None"
             FocusedStrokeThickness="4"
             UnfocusedStrokeThickness="2"
-            WidthRequest="370">
+            WidthRequest="370"
+            EnablePasswordVisibilityToggle="true">
             
 
             <Entry
                 x:Name="tiPassword"
-                ClearButtonVisibility="WhileEditing"
+                TextChanged="tiPassword_TextChanged"
                 IsSpellCheckEnabled="False"
                 IsPassword="True"
                 />
+
         </sf:SfTextInputLayout>
 
-        <Button
+        <Button x:Name="btnIngresar"
+            Clicked="btnIngresar_Clicked"
             Text="Ingresar"
             FontSize="25"
             CornerRadius="26"
             FontFamily="WorkSans-VariableFont"
             />
+
         <StackLayout Orientation="Horizontal">
+
             <Label
                 Text="¿Aún no tienes una cuenta?"
                 HorizontalOptions="Start"
                 Margin="0"
                 Padding="5"/>
+
             <Button
+                x:Name="btRegistrarse"
+                Clicked="btRegistrarse_Clicked"
                 WidthRequest="125"
                 HeightRequest="0" 
                 Text="Registrate aquí"

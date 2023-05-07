@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstantFood.Pantallas.perfilCliente"
+             Title="Me"
+             IconImageSource="profile.png">
+
+    <VerticalStackLayout>
+
+        <Label
+            Text="Perfil"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="23"
+            FontFamily="Roboto-Italic"
+            VerticalOptions="Center"
+            HorizontalOptions="CenterAndExpand"
+            Padding="5"
+            Margin="15"
+        />
+
+        <Button x:Name="btnLogout"
+            Clicked="btnLogout_Clicked"
+            Text="Cerrar Sesión"
+            WidthRequest="250"
+            FontSize="25"
+            CornerRadius="20"
+            FontFamily="WorkSans-VariableFont"
+            Margin="15,580,15,0"
+            Padding="0"
+            Background="white"
+        />
+
+    </VerticalStackLayout>
+
+</ContentPage>
