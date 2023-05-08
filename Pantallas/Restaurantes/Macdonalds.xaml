@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfavatar="clr-namespace:Syncfusion.Maui.Core;assembly=Syncfusion.Maui.Core"
+             x:Class="InstantFood.Pantallas.Restaurantes.Macdonalds">
+
+    <VerticalStackLayout>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                    </Grid.ColumnDefinitions>
+            <sfavatar:SfAvatarView
+                ContentType="Custom"
+                ImageSource="macdonalds.png" 
+                HorizontalOptions="Start"
+                Margin="10"
+                HeightRequest="75"
+                CornerRadius="50"
+                WidthRequest="75" />
+
+            <StackLayout Grid.Column="1" VerticalOptions="Center">
+                <Label Text="McDonalds" FontSize="Large" FontAttributes="Bold" />
+            </StackLayout>
+
+        </Grid>
+
+        <Label
+            Text="Menu"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="20"
+            FontFamily="Roboto-Italic"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="5"
+            Margin="15,25,0,0"
+        />
+
+        <Picker x:Name="CbMenu" WidthRequest="365" HeightRequest="50" Margin="15" Title="TODO" TextColor="Black">
+            <Picker.Items>
+                <x:String>TODO</x:String>
+                <x:String>Platillos</x:String>
+                <x:String>Bebidas</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Frame CornerRadius="10" Margin="15,10,15,10">
+            <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="Combo1"/>
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="combo1.png" WidthRequest="100" HeightRequest="100" Margin="0,0,15,0"/>
+                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Combo 1" FontSize="Large" FontAttributes="Bold" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Precio: " FontSize="Medium" />
+                        <Label Text="$150.00" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Descripcion: " FontSize="Medium" />
+                        <Label Text="Hamburguesa con papas y refresco." FontSize="Small" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Frame>
+
+        <Frame CornerRadius="10" Margin="15,10,15,10">
+            <Frame.GestureRecognizers>
+                    <TapGestureRecognizer x:Name="bebida1"/>
+            </Frame.GestureRecognizers>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Image Source="cocadevidrio.png" WidthRequest="100" HeightRequest="100" Margin="0,0,15,0"/>
+                <StackLayout Grid.Column="1" VerticalOptions="Center">
+                    <Label Text="Coca-Cola" FontSize="Large" FontAttributes="Bold" />
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Precio:" FontSize="Medium" />
+                        <Label Text="$20.00" FontSize="Medium" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical">
+                        <Label Text="Descripcion: " FontSize="Medium" />
+                        <Label Text="Coca-Cola de 600ml." FontSize="Small" />
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+        </Frame>
+
+    </VerticalStackLayout>
+
+</ContentPage>

@@ -120,6 +120,7 @@
                 FontFamily="WorkSans-VariableFont"
                 Margin="15"
                 Padding="0"
+                BackgroundColor= "#fc3b4c"
             />
 
           <!--Registro de los datos del Restaurante-->
@@ -204,6 +205,7 @@
                 FontFamily="WorkSans-VariableFont"
                 Margin="15"
                 Padding="0"
+                BackgroundColor="#fc3b4c"
             />
 
         </VerticalStackLayout>

@@ -17,6 +17,7 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 				fonts.AddFont("WorkSans-Italic-VariableFont_wght.ttf", "WorkSans-Italic");
 				fonts.AddFont("WorkSans-VariableFont_wght.ttf", "WorkSans-VariableFon");
+				fonts.AddFont("Roboto-BoldItalic.ttf", "Roboto-BI");
 			});
 
 #if DEBUG

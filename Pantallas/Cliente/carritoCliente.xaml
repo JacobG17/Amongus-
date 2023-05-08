@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InstantFood.Pantallas.carritoCliente"
+             NavigationPage.BackButtonTitle="Volver">
+
+    <VerticalStackLayout>
+
+        <Label
+            Text="Carrito"
+            TextColor="Black"
+            FontAttributes="Bold"
+            FontSize="23"
+            FontFamily="Roboto-Italic"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="5"
+            Margin="15"
+        />
+
+    </VerticalStackLayout>
+
+</ContentPage>

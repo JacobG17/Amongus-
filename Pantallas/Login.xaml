@@ -9,20 +9,22 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-
+        <!--
         <Label
             Text="LOGIN"
             HorizontalOptions="Center"
             FontSize="50"
             Margin="60"
             />
+        -->
+        <Image Source="logo.png" WidthRequest="380" HeightRequest="300"/>
 
         <Label
             Text="!Bienvenido de vuelta!"
             HorizontalOptions="Start"
-            FontSize="18"
-            FontFamily="WorkSans-VariableFont"
-            TextColor="#5135d1"
+            FontSize="20"
+            FontFamily="Roboto-BI"
+            TextColor="#fc3b4c"
             />
 
         <sf:SfTextInputLayout x:Name="Ususario"
@@ -66,9 +68,10 @@
             FontSize="25"
             CornerRadius="26"
             FontFamily="WorkSans-VariableFont"
+            BackgroundColor="#fc3b4c"
             />
 
-        <StackLayout Orientation="Horizontal">
+        <StackLayout Orientation="Horizontal" >
 
             <Label
                 Text="¿Aún no tienes una cuenta?"
@@ -82,7 +85,7 @@
                 WidthRequest="125"
                 HeightRequest="0" 
                 Text="Registrate aquí"
-                TextColor="#5135d1"
+                TextColor="#fc3b4c"
                 BackgroundColor="White"
                 HorizontalOptions="Start"
                 />

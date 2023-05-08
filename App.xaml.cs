@@ -11,8 +11,8 @@ public partial class App : Application
 		//MainPage = new Login();
         var nav = new NavigationPage(new Login());
 		nav.BarBackgroundColor = Colors.White;
-		nav.BarTextColor = Color.FromArgb("#5135d1");
-
+		nav.BarTextColor = Color.FromArgb("#fc3b4c");
+		
 		MainPage = nav;
 
 		

@@ -70,9 +70,15 @@
 	  <None Remove="Resources\Images\sushi.png" />
 	  <None Remove="Resources\Images\polloasado.png" />
 	  <None Remove="Resources\Images\torta.png" />
+	  <None Remove="Pantallas\Restaurantes\" />
+	  <None Remove="Pantallas\Platillos\" />
+	  <None Remove="Pantallas\Cliente\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="Pantallas\" />
+	  <Folder Include="Pantallas\Restaurantes\" />
+	  <Folder Include="Pantallas\Platillos\" />
+	  <Folder Include="Pantallas\Cliente\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Images\orders.png" />

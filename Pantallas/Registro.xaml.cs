@@ -120,21 +120,21 @@ public partial class Registro : ContentPage
     void tbNombre_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         nombreCliente.Stroke = Color.FromArgb("#6750A4");
-        nombreCliente.HelperText = "";
+        nombreCliente.HelperText = "Ingresa tu nombre";
         nombreCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbApellido_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         apellidoCliente.Stroke = Color.FromArgb("#6750A4");
-        apellidoCliente.HelperText = "";
+        apellidoCliente.HelperText = "Ingresa tu apellido";
         apellidoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbTelefono_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         telefonoCliente.Stroke = Color.FromArgb("#6750A4");
-        telefonoCliente.HelperText = "";
+        telefonoCliente.HelperText = "Ingresa tu telefonos";
         telefonoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
@@ -148,21 +148,21 @@ public partial class Registro : ContentPage
     void tbRestauranteName_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         nombreRestaurante.Stroke = Color.FromArgb("#6750A4");
-        nombreRestaurante.HelperText = "";
+        nombreRestaurante.HelperText = "Ingresa el nombre de tu restaurante";
         nombreRestaurante.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbRestauranteTelefono_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         telefonorestaurante.Stroke = Color.FromArgb("#6750A4");
-        telefonorestaurante.HelperText = "";
+        telefonorestaurante.HelperText = "Ingresa el telefono del restaurante";
         telefonorestaurante.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbDireccion_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         direccionRestaurante.Stroke = Color.FromArgb("#6750A4");
-        direccionRestaurante.HelperText = "";
+        direccionRestaurante.HelperText = "Ingresa la direccion";
         direccionRestaurante.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 }
