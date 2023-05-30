@@ -9,20 +9,21 @@ public partial class Registro : ContentPage
         datosRestaurante(false);
     }
 
+    public Boolean bExiste = false;
+
     void datosCliente(bool mostrar)
     {
         DtCliente.IsVisible = mostrar;
-        idCliente.IsVisible = mostrar;
         nombreCliente.IsVisible = mostrar;
-        apellidoCliente.IsVisible = mostrar;
         telefonoCliente.IsVisible = mostrar;
+        usuarioCliente.IsVisible = mostrar;
+        passwordCliente.IsVisible = mostrar;
         btnRegistroCliente.IsVisible = mostrar;
     }
 
     void datosRestaurante(bool mostrar)
     {
         DtRestaurante.IsVisible = mostrar;
-        idRestaurante.IsVisible = mostrar;
         nombreRestaurante.IsVisible = mostrar;
         telefonorestaurante.IsVisible = mostrar;
         direccionRestaurante.IsVisible = mostrar;
@@ -50,35 +51,6 @@ public partial class Registro : ContentPage
         }
     }
 
-    private async void btnRegistroCliente_Clicked(System.Object sender, System.EventArgs e)
-    {
-        if (tbNombre.Text == null)
-        {
-            nombreCliente.Stroke = Color.FromArgb("#B3261E");
-            nombreCliente.HelperText = "el nombre es requerido*";
-            nombreCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
-            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
-        }
-        else if (tbApellido.Text == null)
-        {
-            apellidoCliente.Stroke = Color.FromArgb("#B3261E");
-            apellidoCliente.HelperText = "el apellido es requerido*";
-            apellidoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
-            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
-        }
-        else if (tbTelefono.Text == null)
-        {
-            telefonoCliente.Stroke = Color.FromArgb("#B3261E");
-            telefonoCliente.HelperText = "el telefono es requerido*";
-            telefonoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
-            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
-        }
-        else
-        {
-            await DisplayAlert("CORRECTO", "!Registro completado con exito!", "Aceptar");
-            await Navigation.PopAsync();
-        }
-    }
 
     private async void btnRegistroRestaurante_Clicked(System.Object sender, System.EventArgs e)
     {
@@ -105,30 +77,37 @@ public partial class Registro : ContentPage
         }
         else
         {
-            await DisplayAlert("CORRECTO", "!Registro completado con exito!", "Aceptar");
-            await Navigation.PopAsync();
+            cliente newCliente = new cliente()
+            {
+                Nombre = tbNombre.Text,
+                Telefono = tbTelefono.Text,
+                Usuario = tbUsuarioCliente.Text,
+                Contrasena = tbPasswordCliente.Text
+            };
+
+            opBD opRegistro = new opBD();
+
+            Boolean bAllOUsuario = (!bExiste); opRegistro.InsertCliente(newCliente);
+
+            if (opRegistro.bAllOk == true)
+            {
+                await DisplayAlert("CORRECTO", "!Registro completado con exito!", "Aceptar");
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                await DisplayAlert("ERROR", opRegistro.sLastError, "Aceptar");
+            }
+            
         }
     }
 
-    void tbID_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
-    {
-        idCliente.Stroke = Color.FromArgb("#6750A4");
-        idCliente.HelperText = "";
-        idCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
-    }
 
     void tbNombre_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
         nombreCliente.Stroke = Color.FromArgb("#6750A4");
         nombreCliente.HelperText = "Ingresa tu nombre";
         nombreCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
-    }
-
-    void tbApellido_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
-    {
-        apellidoCliente.Stroke = Color.FromArgb("#6750A4");
-        apellidoCliente.HelperText = "Ingresa tu apellido";
-        apellidoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbTelefono_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
@@ -138,11 +117,18 @@ public partial class Registro : ContentPage
         telefonoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
-    void tbRestaurantID_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
+    void tbUsuario_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
     {
-        idRestaurante.Stroke = Color.FromArgb("#6750A4");
-        idRestaurante.HelperText = "";
-        idRestaurante.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
+        usuarioCliente.Stroke = Color.FromArgb("#6750A4");
+        usuarioCliente.HelperText = "Ingresa la direccion";
+        usuarioCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
+    }
+
+    void tbPasswordCliente_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
+    {
+        passwordCliente.Stroke = Color.FromArgb("#6750A4");
+        passwordCliente.HelperText = "Ingresa la direccion";
+        passwordCliente.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
     }
 
     void tbRestauranteName_TextChanged(System.Object sender, Microsoft.Maui.Controls.TextChangedEventArgs e)
@@ -164,6 +150,64 @@ public partial class Registro : ContentPage
         direccionRestaurante.Stroke = Color.FromArgb("#6750A4");
         direccionRestaurante.HelperText = "Ingresa la direccion";
         direccionRestaurante.HelperLabelStyle.TextColor = Color.FromArgb("#6750A4");
+    }
+
+    
+
+    async void btnRegistroCliente_Clicked_1(System.Object sender, System.EventArgs e)
+    {
+        if (tbNombre.Text == null)
+        {
+            nombreCliente.Stroke = Color.FromArgb("#B3261E");
+            nombreCliente.HelperText = "el nombre es requerido*";
+            nombreCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
+            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
+        }
+        else if (tbTelefono.Text == null)
+        {
+            telefonoCliente.Stroke = Color.FromArgb("#B3261E");
+            telefonoCliente.HelperText = "el telefono es requerido*";
+            telefonoCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
+            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
+        }
+        else if (tbUsuarioCliente.Text == null)
+        {
+            usuarioCliente.Stroke = Color.FromArgb("#B3261E");
+            usuarioCliente.HelperText = "el telefono es requerido*";
+            usuarioCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
+            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
+        }
+        else if (tbPasswordCliente.Text == null)
+        {
+            passwordCliente.Stroke = Color.FromArgb("#B3261E");
+            passwordCliente.HelperText = "el telefono es requerido*";
+            passwordCliente.HelperLabelStyle.TextColor = Color.FromArgb("#B3261E");
+            await DisplayAlert("Error", "Ingrese correctamente los datos del registro", "Aceptar");
+        }
+        else
+        {
+            cliente newCliente = new cliente()
+            {
+                Nombre = tbNombre.Text,
+                Telefono = tbTelefono.Text,
+                Usuario = tbUsuarioCliente.Text,
+                Contrasena = tbPasswordCliente.Text
+            };
+
+            opBD opRegistro = new opBD();
+
+            Boolean bAllOUsuario = (!bExiste); opRegistro.InsertCliente(newCliente);
+
+            if (opRegistro.bAllOk == true)
+            {
+                await DisplayAlert("CORRECTO", "!Registro completado con exito!", "Aceptar");
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                await DisplayAlert("ERROR", opRegistro.sLastError, "Aceptar");
+            }
+        }
     }
 }
 

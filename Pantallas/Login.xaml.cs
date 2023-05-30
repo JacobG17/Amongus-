@@ -7,6 +7,8 @@ public partial class Login : ContentPage
 		InitializeComponent();
     }
 
+    public Boolean bExiste = false;
+    
     private async void btRegistrarse_Clicked(System.Object sender, System.EventArgs e)
     {
         var registro = new Registro();
@@ -41,9 +43,70 @@ public partial class Login : ContentPage
         }
         else
         {
+            /*
+            opBD opPlatillo = new opBD();
+
+            string rutaimagen = "/Users/jacobglz/Desktop/cocaLata.png";
+
+            platillo newPlatillo = new platillo()
+            {
+                idPlatillo = 0,
+                idrestaurante = 1,
+                nombrePlatillo = "Coca-Cola",
+                Descripcion = "Refresco Coca-Cola de 400ml en lata.",
+                Precio = 15,
+                Categoria = "Bebida",
+                imagen = File.ReadAllBytes(rutaimagen)
+            };
+            opPlatillo.InsertPLatillo(newPlatillo);
+
+            string rutaimagen1 = "/Users/jacobglz/Desktop/pepsiLata.png";
+
+            platillo newPlatillo1 = new platillo()
+            {
+                idPlatillo = 0,
+                idrestaurante = 1,
+                nombrePlatillo = "Pepsi",
+                Descripcion = "Refresco Pepsi de 400ml en lata.",
+                Precio = 15,
+                Categoria = "Bebida",
+                imagen = File.ReadAllBytes(rutaimagen1)
+            };
+
+            opPlatillo.InsertPLatillo(newPlatillo1);
+
+            string rutaimagen2 = "/Users/jacobglz/Desktop/spriteLata.png";
+
+            platillo newPlatillo2 = new platillo()
+            {
+                idPlatillo = 1,
+                idrestaurante = 1,
+                nombrePlatillo = "Sprite",
+                Descripcion = "Refresco sabor Sprite de 400ml en lata.",
+                Precio = 15,
+                Categoria = "Bebida",
+                imagen = File.ReadAllBytes(rutaimagen2)
+            };   
+
+            Boolean bAllOUsuario = (!bExiste); opPlatillo.InsertPLatillo(newPlatillo2);
+
+            if (opPlatillo.bAllOk == true)
+            {
+
+                await DisplayAlert("CORRECTO", "Platillo agregado con exito", "Aceptar");
+                await Navigation.PushAsync(new Cliente());
+                tiUsuario.Text = null;
+                tiPassword.Text = null;
+            }
+            else
+            {
+                await DisplayAlert("ERROR", opPlatillo.sLastError, "Aceptar");
+            }*/
+            //await DisplayAlert("CORRECTO", "Bienvenido", "Aceptar");
             await Navigation.PushAsync(new Cliente());
             tiUsuario.Text = null;
             tiPassword.Text = null;
+
         }
     }
 

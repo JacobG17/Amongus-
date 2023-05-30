@@ -49,23 +49,8 @@
                 HorizontalOptions="Fill"
                 Margin="15"
             />
-
-            <sf:SfTextInputLayout x:Name="idCliente"
-                Hint="Cliente ID"
-                ContainerType="None"
-                FocusedStrokeThickness="4"
-                UnfocusedStrokeThickness="2"
-                WidthRequest="370">
-
-                <Entry x:Name="tbID"
-                    TextChanged="tbID_TextChanged"
-                    ClearButtonVisibility="WhileEditing"
-                />
-
-            </sf:SfTextInputLayout>
-
             <sf:SfTextInputLayout x:Name="nombreCliente"
-                HelperText="Ingresa tu nombre"
+                HelperText="Ingresa tu nombre completo"
                 Hint="Nombre"
                 ContainerType="None"
                 FocusedStrokeThickness="4"
@@ -74,21 +59,6 @@
 
                 <Entry x:Name="tbNombre"
                        TextChanged="tbNombre_TextChanged"
-                    ClearButtonVisibility="WhileEditing"
-                />
-
-            </sf:SfTextInputLayout>
-
-            <sf:SfTextInputLayout x:Name="apellidoCliente"
-                HelperText="Ingresa tu apellido"
-                Hint="Apellido"
-                ContainerType="None"
-                FocusedStrokeThickness="4"
-                UnfocusedStrokeThickness="2"
-                WidthRequest="370">
-
-                <Entry x:Name="tbApellido"
-                       TextChanged="tbApellido_TextChanged"
                     ClearButtonVisibility="WhileEditing"
                 />
 
@@ -111,9 +81,40 @@
 
             </sf:SfTextInputLayout>
 
+            <sf:SfTextInputLayout x:Name="usuarioCliente"
+                HelperText="Ingresa tu nombre de usuario"
+                Hint="Usuario"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbUsuarioCliente"
+                    TextChanged="tbUsuario_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+            
+            <sf:SfTextInputLayout x:Name="passwordCliente"
+                HelperText="Ingresa tu contraseña"
+                Hint="Contraseña"
+                ContainerType="None"
+                FocusedStrokeThickness="4"
+                UnfocusedStrokeThickness="2"
+                WidthRequest="370">
+
+                <Entry x:Name="tbPasswordCliente"
+                    TextChanged="tbPasswordCliente_TextChanged"
+                    ClearButtonVisibility="WhileEditing"
+                />
+
+            </sf:SfTextInputLayout>
+            
+
             <Button x:Name="btnRegistroCliente"
                 Text="Finalizar registro"
-                Clicked="btnRegistroCliente_Clicked"
+                Clicked="btnRegistroCliente_Clicked_1"
                 WidthRequest="250"
                 FontSize="25"
                 CornerRadius="20"
@@ -134,20 +135,6 @@
                 HorizontalOptions="Fill"
                 Margin="15"
             />
-
-            <sf:SfTextInputLayout x:Name="idRestaurante"
-                Hint="Restaurante ID"
-                ContainerType="None"
-                FocusedStrokeThickness="4"
-                UnfocusedStrokeThickness="2"
-                WidthRequest="370">
-
-                <Entry x:Name="tbRestaurantID"
-                    TextChanged="tbRestaurantID_TextChanged"
-                    ClearButtonVisibility="WhileEditing"
-                />
-
-            </sf:SfTextInputLayout>
 
             <sf:SfTextInputLayout x:Name="nombreRestaurante"
                 HelperText="Ingresa el nombre de tu restaurante"

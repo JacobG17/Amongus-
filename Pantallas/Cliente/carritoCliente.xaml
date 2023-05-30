@@ -4,9 +4,11 @@
              x:Class="InstantFood.Pantallas.carritoCliente"
              NavigationPage.BackButtonTitle="Volver">
 
-    <VerticalStackLayout>
+    <ScrollView Orientation="Vertical">
 
-        <Label
+        <VerticalStackLayout x:Name="contentCarrito">    
+
+            <Label
             Text="Carrito"
             TextColor="Black"
             FontAttributes="Bold"
@@ -16,8 +18,13 @@
             HorizontalOptions="Center"
             Padding="5"
             Margin="15"
-        />
+            />
+            
+       
+           
+            
+        </VerticalStackLayout>
 
-    </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

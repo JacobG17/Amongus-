@@ -9,14 +9,7 @@
             Spacing="25"
             Padding="30,0"
             VerticalOptions="Center">
-        <!--
-        <Label
-            Text="LOGIN"
-            HorizontalOptions="Center"
-            FontSize="50"
-            Margin="60"
-            />
-        -->
+
         <Image Source="logo.png" WidthRequest="380" HeightRequest="300"/>
 
         <Label
