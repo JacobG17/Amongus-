@@ -58,7 +58,7 @@ namespace InstantFood
 
         public MySqlConnection CrearConexion()
         {
-            string cadenaConexion = $"DataSource= localhost; Port=3306; User Id=jacobG17; Password=Hermano1; Database=InstantFood; SSL Mode=None;";
+            string cadenaConexion = $"DataSource=localhost; Port=3306; User Id=jacobG17; Password=Hermano1; Database=InstantFood; SSL Mode=None;";
             MySqlConnection conn = new MySqlConnection(cadenaConexion);
             conn.Open();
             return conn;
